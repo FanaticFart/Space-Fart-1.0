@@ -3,20 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Fart - Unity WebGL Game</title>
-
     <style>
-        html, body {
+        body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        body {
-            position: fixed;
-            width: 100%;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,15 +17,38 @@
         }
         #unity-container {
             position: relative;
-            width: 100%;
-            max-width: 550px;
+            width: 550px;
             height: 100%;
-            max-height: 960px;
         }
         #unity-canvas {
             width: 100%;
             height: 100%;
             background: #1F1F20;
+        }
+        #loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            z-index: 1;
+            flex-direction: column; 
+          
+        }
+        @media screen and (max-width: 650px) {
+            #unity-container {
+                width: 100%;
+                height: 100vh;
+            }
         }
     </style>
 </head>
