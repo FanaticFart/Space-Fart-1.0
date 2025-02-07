@@ -38,6 +38,8 @@
             color: white;
             font-family: Arial, sans-serif;
             z-index: 1;
+            flex-direction: column; 
+          
         }
         @media screen and (max-width: 768px) {
             #unity-container {
@@ -50,9 +52,10 @@
 <body>
     <div id="unity-container">
         <div id="loading-screen">
-            <h1>Loading Space Fart...</h1><br>
-            <img src="loading.gif"></img>
+            <h1>Loading Space Fart</h1>
+            <img width=100px src="loading.gif"></img>
         </div>
+
         <canvas id="unity-canvas"></canvas>
     </div>
 
